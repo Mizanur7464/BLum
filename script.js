@@ -3,17 +3,6 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 tg.setHeaderColor('#000000');
 
-// Get the base URL for GitHub Pages
-const baseUrl = '/BLum';
-
-// Farming functionality
-let farmingInterval;
-let farmingAmount = 16.126;
-let isFarming = false;
-let farmingStartTime;
-const FARMING_RATE = 0.002;
-const FARMING_DURATION = 7200000; // 2 hours
-
 // Navigation functionality
 document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', function() {
@@ -25,22 +14,27 @@ document.querySelectorAll('.nav-item').forEach(item => {
         // Add active class to clicked item
         this.classList.add('active');
         
-        // Handle navigation with correct base URL
+        // Get current path
+        const currentPath = window.location.pathname;
+        const isInSubfolder = currentPath.split('/').length > 2;
+        const basePrefix = isInSubfolder ? '../' : './';
+        
+        // Handle navigation
         switch(page) {
             case 'home':
-                window.location.href = `${baseUrl}/index.html`;
+                window.location.href = basePrefix + 'index.html';
                 break;
             case 'earn':
-                window.location.href = `${baseUrl}/earn/index.html`;
+                window.location.href = basePrefix + 'earn/index.html';
                 break;
             case 'memepad':
-                window.location.href = `${baseUrl}/memepad/index.html`;
+                window.location.href = basePrefix + 'memepad/index.html';
                 break;
             case 'frens':
-                window.location.href = `${baseUrl}/friends/index.html`;
+                window.location.href = basePrefix + 'friends/index.html';
                 break;
             case 'wallet':
-                window.location.href = `${baseUrl}/wallet/index.html`;
+                window.location.href = basePrefix + 'wallet/index.html';
                 break;
         }
     });
@@ -55,6 +49,14 @@ if (document.querySelector('.game-icon')) {
         gameIcon.style.transform = `rotate(${rotation}deg)`;
     }, 50);
 }
+
+// Farming functionality
+let farmingInterval;
+let farmingAmount = 16.126;
+let isFarming = false;
+let farmingStartTime;
+const FARMING_RATE = 0.002;
+const FARMING_DURATION = 7200000; // 2 hours
 
 // Farming functionality
 function startFarming() {
