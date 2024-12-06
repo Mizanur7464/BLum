@@ -9,7 +9,7 @@ BOT_TOKEN = os.getenv('BOT_TOKEN')
 # Replace with your GitHub Pages URL
 # Example: https://your-username.github.io
 # Or: https://your-username.github.io/repository-name
-WEB_APP_URL = os.getenv('WEB_APP_URL', 'https://your-username.github.io')
+WEB_APP_URL = os.getenv('WEB_APP_URL', 'https://mizanur7464.github.io/BLum/')
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Send a message with a button that opens the web app."""

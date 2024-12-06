@@ -3,6 +3,9 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 tg.setHeaderColor('#000000');
 
+// Get the base URL for GitHub Pages
+const baseUrl = '/BLum';
+
 // Farming functionality
 let farmingInterval;
 let farmingAmount = 16.126;
@@ -22,22 +25,22 @@ document.querySelectorAll('.nav-item').forEach(item => {
         // Add active class to clicked item
         this.classList.add('active');
         
-        // Handle navigation
+        // Handle navigation with correct base URL
         switch(page) {
             case 'home':
-                window.location.href = '/index.html';
+                window.location.href = `${baseUrl}/index.html`;
                 break;
             case 'earn':
-                window.location.href = '/earn/index.html';
+                window.location.href = `${baseUrl}/earn/index.html`;
                 break;
             case 'memepad':
-                window.location.href = '/memepad/index.html';
+                window.location.href = `${baseUrl}/memepad/index.html`;
                 break;
             case 'frens':
-                window.location.href = '/friends/index.html';
+                window.location.href = `${baseUrl}/friends/index.html`;
                 break;
             case 'wallet':
-                window.location.href = '/wallet/index.html';
+                window.location.href = `${baseUrl}/wallet/index.html`;
                 break;
         }
     });
