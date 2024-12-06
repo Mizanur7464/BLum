@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blum - Memepad</title>
+    <title>Memepad - Blum Mini App</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="../styles.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -15,42 +14,27 @@
             <div class="username">mizansdfsdfsdf</div>
             <div class="balance">₿ 10</div>
         </div>
-        
+
         <div class="memepad-section">
-            <div class="meme-stats">
-                <div class="stat-card">
-                    <div class="stat-value">245</div>
-                    <div class="stat-label">Total Memes</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">1.5K</div>
-                    <div class="stat-label">Views</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">₿ 0.005</div>
-                    <div class="stat-label">Earned</div>
-                </div>
-            </div>
-
-            <div class="meme-grid">
-                <div class="meme-card">
-                    <img src="placeholder1.jpg" alt="Meme 1" class="meme-image">
-                    <div class="meme-info">
-                        <span class="meme-likes">
-                            <i class="fas fa-heart"></i> 124
-                        </span>
-                        <span class="meme-shares">
-                            <i class="fas fa-share"></i> 45
-                        </span>
+            <h2>Meme Games</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-icon">🎮</div>
+                    <div class="game-info">
+                        <h3>Meme Race</h3>
+                        <p>Win up to ₿ 100</p>
                     </div>
+                    <button class="play-btn">Play</button>
                 </div>
-                <!-- Add more meme cards as needed -->
+                <div class="game-card">
+                    <div class="game-icon">🎲</div>
+                    <div class="game-info">
+                        <h3>Meme Dice</h3>
+                        <p>Win up to ₿ 50</p>
+                    </div>
+                    <button class="play-btn">Play</button>
+                </div>
             </div>
-
-            <button class="upload-btn">
-                <i class="fas fa-plus"></i>
-                Upload New Meme
-            </button>
         </div>
 
         <div class="nav-bar">
@@ -79,6 +63,5 @@
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="../script.js"></script>
-    <script src="script.js"></script>
 </body>
 </html> 

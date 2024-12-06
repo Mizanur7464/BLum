@@ -14,27 +14,25 @@ document.querySelectorAll('.nav-item').forEach(item => {
         // Add active class to clicked item
         this.classList.add('active');
         
-        // Get current path
-        const currentPath = window.location.pathname;
-        const isInSubfolder = currentPath.split('/').length > 2;
-        const basePrefix = isInSubfolder ? '../' : './';
+        // Get base URL
+        const baseUrl = window.location.origin + '/BLum';
         
         // Handle navigation
         switch(page) {
             case 'home':
-                window.location.href = basePrefix + 'index.html';
+                window.location.href = baseUrl + '/index.html';
                 break;
             case 'earn':
-                window.location.href = basePrefix + 'earn/index.html';
+                window.location.href = baseUrl + '/earn/index.html';
                 break;
             case 'memepad':
-                window.location.href = basePrefix + 'memepad/index.html';
+                window.location.href = baseUrl + '/memepad/index.html';
                 break;
             case 'frens':
-                window.location.href = basePrefix + 'friends/index.html';
+                window.location.href = baseUrl + '/friends/index.html';
                 break;
             case 'wallet':
-                window.location.href = basePrefix + 'wallet/index.html';
+                window.location.href = baseUrl + '/wallet/index.html';
                 break;
         }
     });
